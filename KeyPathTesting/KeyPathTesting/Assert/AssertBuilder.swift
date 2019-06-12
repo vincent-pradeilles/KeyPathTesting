@@ -10,7 +10,7 @@ import Foundation
 
 @_functionBuilder
 public class AssertBuilder {
-    static func buildBlock<T>(_ children: Assert<T>...) -> Assert<T> {
+    public static func buildBlock<T>(_ children: Assert<T>...) -> Assert<T> {
         return children.reduce(.empty, { $0.combined(with: $1) })
     }
 }
