@@ -43,3 +43,9 @@ public func >= <Type, Value: Comparable>(property: KeyPath<Type, Value>, constan
         XCTAssertGreaterThanOrEqual(instance[keyPath: property], constant)
     })
 }
+
+public prefix func ! <Type>(property: KeyPath<Type, Bool>) -> Assert<Type> {
+    return Assert(assertor: { instance in
+        XCTAssertFalse(instance[keyPath: property])
+    })
+}
