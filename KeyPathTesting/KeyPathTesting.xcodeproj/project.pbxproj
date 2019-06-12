@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF46A00222B112F1003F0C2C /* KeyPathTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9FB61822B0CC8E0085E8BE /* KeyPathTesting.framework */; };
+		BF46A00B22B11334003F0C2C /* AssertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46A00A22B11334003F0C2C /* AssertTests.swift */; };
+		BF46A00D22B11503003F0C2C /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46A00C22B11503003F0C2C /* OperatorsTests.swift */; };
 		BF9FB61D22B0CC8E0085E8BE /* KeyPathTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = BF9FB61B22B0CC8E0085E8BE /* KeyPathTesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF9FB62922B0CCAD0085E8BE /* Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FB62822B0CCAD0085E8BE /* Assert.swift */; };
 		BF9FB62B22B0CCC20085E8BE /* AssertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FB62A22B0CCC20085E8BE /* AssertBuilder.swift */; };
@@ -14,7 +17,21 @@
 		BF9FB63522B0CE710085E8BE /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FB63022B0CD8D0085E8BE /* Operators.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BF46A00322B112F1003F0C2C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF9FB60F22B0CC8E0085E8BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF9FB61722B0CC8E0085E8BE;
+			remoteInfo = KeyPathTesting;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		BF469FFD22B112F1003F0C2C /* KeyPathTestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyPathTestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF46A00122B112F1003F0C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF46A00A22B11334003F0C2C /* AssertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertTests.swift; sourceTree = "<group>"; };
+		BF46A00C22B11503003F0C2C /* OperatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsTests.swift; sourceTree = "<group>"; };
 		BF9FB61822B0CC8E0085E8BE /* KeyPathTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyPathTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9FB61B22B0CC8E0085E8BE /* KeyPathTesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyPathTesting.h; sourceTree = "<group>"; };
 		BF9FB61C22B0CC8E0085E8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -26,6 +43,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BF469FFA22B112F1003F0C2C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF46A00222B112F1003F0C2C /* KeyPathTesting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF9FB61522B0CC8E0085E8BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -36,10 +61,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF469FFE22B112F1003F0C2C /* KeyPathTestingTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF46A00122B112F1003F0C2C /* Info.plist */,
+				BF46A00922B11313003F0C2C /* Assert */,
+				BF46A00822B11302003F0C2C /* Operators */,
+			);
+			path = KeyPathTestingTests;
+			sourceTree = "<group>";
+		};
+		BF46A00822B11302003F0C2C /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				BF46A00C22B11503003F0C2C /* OperatorsTests.swift */,
+			);
+			path = Operators;
+			sourceTree = "<group>";
+		};
+		BF46A00922B11313003F0C2C /* Assert */ = {
+			isa = PBXGroup;
+			children = (
+				BF46A00A22B11334003F0C2C /* AssertTests.swift */,
+			);
+			path = Assert;
+			sourceTree = "<group>";
+		};
 		BF9FB60E22B0CC8E0085E8BE = {
 			isa = PBXGroup;
 			children = (
 				BF9FB61A22B0CC8E0085E8BE /* KeyPathTesting */,
+				BF469FFE22B112F1003F0C2C /* KeyPathTestingTests */,
 				BF9FB61922B0CC8E0085E8BE /* Products */,
 				BF9FB62322B0CC980085E8BE /* Frameworks */,
 			);
@@ -49,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				BF9FB61822B0CC8E0085E8BE /* KeyPathTesting.framework */,
+				BF469FFD22B112F1003F0C2C /* KeyPathTestingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +157,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		BF469FFC22B112F1003F0C2C /* KeyPathTestingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF46A00722B112F1003F0C2C /* Build configuration list for PBXNativeTarget "KeyPathTestingTests" */;
+			buildPhases = (
+				BF469FF922B112F1003F0C2C /* Sources */,
+				BF469FFA22B112F1003F0C2C /* Frameworks */,
+				BF469FFB22B112F1003F0C2C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF46A00422B112F1003F0C2C /* PBXTargetDependency */,
+			);
+			name = KeyPathTestingTests;
+			productName = KeyPathTestingTests;
+			productReference = BF469FFD22B112F1003F0C2C /* KeyPathTestingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BF9FB61722B0CC8E0085E8BE /* KeyPathTesting */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF9FB62022B0CC8E0085E8BE /* Build configuration list for PBXNativeTarget "KeyPathTesting" */;
@@ -128,9 +199,14 @@
 		BF9FB60F22B0CC8E0085E8BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = Vincent;
 				TargetAttributes = {
+					BF469FFC22B112F1003F0C2C = {
+						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
+					};
 					BF9FB61722B0CC8E0085E8BE = {
 						CreatedOnToolsVersion = 11.0;
 						LastSwiftMigration = 1100;
@@ -151,11 +227,19 @@
 			projectRoot = "";
 			targets = (
 				BF9FB61722B0CC8E0085E8BE /* KeyPathTesting */,
+				BF469FFC22B112F1003F0C2C /* KeyPathTestingTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BF469FFB22B112F1003F0C2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF9FB61622B0CC8E0085E8BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -166,6 +250,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BF469FF922B112F1003F0C2C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF46A00B22B11334003F0C2C /* AssertTests.swift in Sources */,
+				BF46A00D22B11503003F0C2C /* OperatorsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF9FB61422B0CC8E0085E8BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -179,7 +272,54 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BF46A00422B112F1003F0C2C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF9FB61722B0CC8E0085E8BE /* KeyPathTesting */;
+			targetProxy = BF46A00322B112F1003F0C2C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		BF46A00522B112F1003F0C2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2937XWQ9VF;
+				INFOPLIST_FILE = KeyPathTestingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincent.pradeilles.KeyPathTestingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF46A00622B112F1003F0C2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2937XWQ9VF;
+				INFOPLIST_FILE = KeyPathTestingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincent.pradeilles.KeyPathTestingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		BF9FB61E22B0CC8E0085E8BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -358,6 +498,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BF46A00722B112F1003F0C2C /* Build configuration list for PBXNativeTarget "KeyPathTestingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF46A00522B112F1003F0C2C /* Debug */,
+				BF46A00622B112F1003F0C2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BF9FB61222B0CC8E0085E8BE /* Build configuration list for PBXProject "KeyPathTesting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
