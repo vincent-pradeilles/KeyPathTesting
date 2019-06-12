@@ -31,6 +31,12 @@ Xcode 11+ & Swift 5.1
 
 ## Installation
 
+### CocoaPods
+
+Add the following to your `Podfile`:
+
+`pod "KeyPathTesting"`
+
 ### Carthage
 
 Add the following to your `Cartfile`:
