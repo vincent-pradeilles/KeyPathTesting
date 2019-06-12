@@ -9,6 +9,10 @@
 import XCTest
 import KeyPathTesting
 
+extension Collection {
+    var hasElements: Bool { return !isEmpty }
+}
+
 class OperatorsTests: XCTestCase {
     func testOperators() {
         let myData = [1, 2, 3, 4]
@@ -17,6 +21,7 @@ class OperatorsTests: XCTestCase {
             \.isEmpty == false
             \.isEmpty != true
             !\.isEmpty
+            \.hasElements == true
             \.count > 2
             \.count >= 4
             \.count < 7
