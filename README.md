@@ -11,7 +11,7 @@ Here's an example of how it can be used:
 
 ```swift
 class MyTests: XCTestCase {
-    func myTest() {
+    func test() {
         let myData = [1, 2, 3, 4]
         
         assert(on: myData) {
