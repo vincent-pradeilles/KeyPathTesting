@@ -20,6 +20,12 @@ public func != <Type, Value: Equatable>(property: KeyPath<Type, Value>, constant
     })
 }
 
+public func ~= <Type, Value> (_ pattern: ClosedRange<Value>, _ leftAttribute: KeyPath<Type, Value>) -> Assert<Type> {
+    return Assert(assertor: { instance, file, line in
+        XCTAssert(pattern ~= instance[keyPath: leftAttribute], file: file, line: line)
+    })
+}
+
 public func < <Type, Value: Comparable>(property: KeyPath<Type, Value>, constant: Value) -> Assert<Type> {
     return Assert(assertor: { instance, file, line in
         XCTAssertLessThan(instance[keyPath: property], constant, file: file, line: line)
