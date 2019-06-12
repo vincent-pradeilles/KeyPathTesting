@@ -9,18 +9,18 @@
 import Foundation
 
 public struct Assert<Type> {
-    public let assertor: (Type) -> ()
+    public let assertor: (_ instance: Type, _ file: StaticString, _ line: UInt) -> ()
     
-    public init(assertor: @escaping (Type) -> ()) {
+    public init(assertor: @escaping (_ instance: Type, _ file: StaticString, _ line: UInt) -> ()) {
         self.assertor = assertor
     }
     
-    public static var empty: Assert<Type> { return Assert(assertor: { _ in }) }
+    public static var empty: Assert<Type> { return Assert(assertor: { _, _, _ in }) }
     
     public func combined(with other: Assert<Type>) -> Assert<Type> {
-        return Assert { instance in
-            self.assertor(instance)
-            other.assertor(instance)
+        return Assert { instance, file, line in
+            self.assertor(instance, file, line)
+            other.assertor(instance, file, line)
         }
     }
 }

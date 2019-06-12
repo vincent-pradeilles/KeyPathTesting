@@ -9,43 +9,43 @@
 import XCTest
 
 public func == <Type, Value: Equatable>(property: KeyPath<Type, Value>, constant: Value) -> Assert<Type> {
-    return Assert(assertor: { instance in
-        XCTAssertEqual(instance[keyPath: property], constant)
+    return Assert(assertor: { instance, file, line in
+        XCTAssertEqual(instance[keyPath: property], constant, file: file, line: line)
     })
 }
 
 public func != <Type, Value: Equatable>(property: KeyPath<Type, Value>, constant: Value) -> Assert<Type> {
-    return Assert(assertor: { instance in
-        XCTAssertNotEqual(instance[keyPath: property], constant)
+    return Assert(assertor: { instance, file, line in
+        XCTAssertNotEqual(instance[keyPath: property], constant, file: file, line: line)
     })
 }
 
 public func < <Type, Value: Comparable>(property: KeyPath<Type, Value>, constant: Value) -> Assert<Type> {
-    return Assert(assertor: { instance in
-        XCTAssertLessThan(instance[keyPath: property], constant)
+    return Assert(assertor: { instance, file, line in
+        XCTAssertLessThan(instance[keyPath: property], constant, file: file, line: line)
     })
 }
 
 public func <= <Type, Value: Comparable>(property: KeyPath<Type, Value>, constant: Value) -> Assert<Type> {
-    return Assert(assertor: { instance in
-        XCTAssertLessThanOrEqual(instance[keyPath: property], constant)
+    return Assert(assertor: { instance, file, line in
+        XCTAssertLessThanOrEqual(instance[keyPath: property], constant, file: file, line: line)
     })
 }
 
 public func > <Type, Value: Comparable>(property: KeyPath<Type, Value>, constant: Value) -> Assert<Type> {
-    return Assert(assertor: { instance in
-        XCTAssertGreaterThan(instance[keyPath: property], constant)
+    return Assert(assertor: { instance, file, line in
+        XCTAssertGreaterThan(instance[keyPath: property], constant, file: file, line: line)
     })
 }
 
 public func >= <Type, Value: Comparable>(property: KeyPath<Type, Value>, constant: Value) -> Assert<Type> {
-    return Assert(assertor: { instance in
-        XCTAssertGreaterThanOrEqual(instance[keyPath: property], constant)
+    return Assert(assertor: { instance, file, line in
+        XCTAssertGreaterThanOrEqual(instance[keyPath: property], constant, file: file, line: line)
     })
 }
 
 public prefix func ! <Type>(property: KeyPath<Type, Bool>) -> Assert<Type> {
-    return Assert(assertor: { instance in
-        XCTAssertFalse(instance[keyPath: property])
+    return Assert(assertor: { instance, file, line in
+        XCTAssertFalse(instance[keyPath: property], file: file, line: line)
     })
 }

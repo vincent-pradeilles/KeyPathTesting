@@ -8,6 +8,6 @@
 
 import Foundation
 
-public func assert<Type>(on instance: Type, @AssertBuilder assertions: () -> Assert<Type>) {
-    assertions().assertor(instance)
+func assert<Type>(on instance: Type, _ file: StaticString = #file, _ line: UInt = #line, @AssertBuilder assertions: () -> Assert<Type>) {
+    assertions().assertor(instance, file, line)
 }
