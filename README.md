@@ -42,3 +42,7 @@ Add the following to your `Podfile`:
 Add the following to your `Cartfile`:
 
 `github "vincent-pradeilles/KeyPathTesting"`
+
+## Author
+
+* Twitter: [@v_pradeilles](https://twitter.com/v_pradeilles)
