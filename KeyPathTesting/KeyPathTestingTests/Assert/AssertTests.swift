@@ -18,8 +18,8 @@ class AssertTests: XCTestCase {
     }
     
     func testCombinedAsserts() {
-        let first = Assert<Void>(assertor: { _, _, _ in })
-        let second = Assert<Void>(assertor: { _, _, _ in })
+        let first = Assertion<Void>.empty
+        let second = Assertion<Void>.empty
         
         let combined = first.combined(with: second)
         

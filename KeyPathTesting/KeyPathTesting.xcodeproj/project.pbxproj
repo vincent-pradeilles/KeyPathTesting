@@ -11,8 +11,8 @@
 		BF46A00B22B11334003F0C2C /* AssertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46A00A22B11334003F0C2C /* AssertTests.swift */; };
 		BF46A00D22B11503003F0C2C /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46A00C22B11503003F0C2C /* OperatorsTests.swift */; };
 		BF9FB61D22B0CC8E0085E8BE /* KeyPathTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = BF9FB61B22B0CC8E0085E8BE /* KeyPathTesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF9FB62922B0CCAD0085E8BE /* Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FB62822B0CCAD0085E8BE /* Assert.swift */; };
-		BF9FB62B22B0CCC20085E8BE /* AssertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FB62A22B0CCC20085E8BE /* AssertBuilder.swift */; };
+		BF9FB62922B0CCAD0085E8BE /* Assertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FB62822B0CCAD0085E8BE /* Assertion.swift */; };
+		BF9FB62B22B0CCC20085E8BE /* AssertionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FB62A22B0CCC20085E8BE /* AssertionBuilder.swift */; };
 		BF9FB62D22B0CCEE0085E8BE /* TopLevelFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FB62C22B0CCEE0085E8BE /* TopLevelFunctions.swift */; };
 		BF9FB63522B0CE710085E8BE /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FB63022B0CD8D0085E8BE /* Operators.swift */; };
 /* End PBXBuildFile section */
@@ -36,8 +36,8 @@
 		BF9FB61B22B0CC8E0085E8BE /* KeyPathTesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyPathTesting.h; sourceTree = "<group>"; };
 		BF9FB61C22B0CC8E0085E8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF9FB62422B0CC990085E8BE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		BF9FB62822B0CCAD0085E8BE /* Assert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assert.swift; sourceTree = "<group>"; };
-		BF9FB62A22B0CCC20085E8BE /* AssertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertBuilder.swift; sourceTree = "<group>"; };
+		BF9FB62822B0CCAD0085E8BE /* Assertion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assertion.swift; sourceTree = "<group>"; };
+		BF9FB62A22B0CCC20085E8BE /* AssertionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertionBuilder.swift; sourceTree = "<group>"; };
 		BF9FB62C22B0CCEE0085E8BE /* TopLevelFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopLevelFunctions.swift; sourceTree = "<group>"; };
 		BF9FB63022B0CD8D0085E8BE /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,8 +128,8 @@
 		BF9FB62E22B0CD710085E8BE /* Assert */ = {
 			isa = PBXGroup;
 			children = (
-				BF9FB62822B0CCAD0085E8BE /* Assert.swift */,
-				BF9FB62A22B0CCC20085E8BE /* AssertBuilder.swift */,
+				BF9FB62822B0CCAD0085E8BE /* Assertion.swift */,
+				BF9FB62A22B0CCC20085E8BE /* AssertionBuilder.swift */,
 				BF9FB62C22B0CCEE0085E8BE /* TopLevelFunctions.swift */,
 			);
 			path = Assert;
@@ -200,7 +200,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = Vincent;
 				TargetAttributes = {
 					BF469FFC22B112F1003F0C2C = {
@@ -265,8 +265,8 @@
 			files = (
 				BF9FB62D22B0CCEE0085E8BE /* TopLevelFunctions.swift in Sources */,
 				BF9FB63522B0CE710085E8BE /* Operators.swift in Sources */,
-				BF9FB62922B0CCAD0085E8BE /* Assert.swift in Sources */,
-				BF9FB62B22B0CCC20085E8BE /* AssertBuilder.swift in Sources */,
+				BF9FB62922B0CCAD0085E8BE /* Assertion.swift in Sources */,
+				BF9FB62B22B0CCC20085E8BE /* AssertionBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +346,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -409,6 +410,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -450,7 +452,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				INFOPLIST_FILE = KeyPathTesting/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -458,7 +463,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-weak-lswiftXCTest";
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					XCTest,
+					"-weak-lXCTestSwiftSupport",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.vincentpradeilles.KeyPathTesting;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -478,7 +487,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				INFOPLIST_FILE = KeyPathTesting/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,7 +498,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-weak-lswiftXCTest";
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					XCTest,
+					"-weak-lXCTestSwiftSupport",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = fr.vincentpradeilles.KeyPathTesting;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
