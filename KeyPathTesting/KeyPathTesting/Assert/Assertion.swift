@@ -8,23 +8,20 @@
 
 import Foundation
 
+public typealias RawAssertion<Type> = (_ instance: Type, _ file: StaticString, _ line: UInt) -> ()
+
 public struct Assertion<Type> {
-    private let assertion: (_ instance: Type, _ file: StaticString, _ line: UInt) -> ()
+    public let assertion: RawAssertion<Type>
+    public let file: StaticString
+    public let line: UInt
     
-    public init(assertion: @escaping (_ instance: Type, _ file: StaticString, _ line: UInt) -> ()) {
+    public init(assertion: @escaping RawAssertion<Type>, file: StaticString, line: UInt) {
         self.assertion = assertion
+        self.file = file
+        self.line = line
     }
     
-    public func assert(on instance: Type, _ file: StaticString, _ line: UInt) {
+    public func assert(on instance: Type) {
         self.assertion(instance, file, line)
-    }
-    
-    public static var empty: Assertion<Type> { return Assertion(assertion: { _, _, _ in }) }
-    
-    public func combined(with other: Assertion<Type>) -> Assertion<Type> {
-        return Assertion { instance, file, line in
-            self.assertion(instance, file, line)
-            other.assertion(instance, file, line)
-        }
     }
 }

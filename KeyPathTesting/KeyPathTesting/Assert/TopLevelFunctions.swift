@@ -9,8 +9,6 @@
 import Foundation
 
 public func assert<Type>(on instance: Type,
-                         _ file: StaticString = #file,
-                         _ line: UInt = #line,
-                         @AssertionBuilder<Type> assertions: () -> Assertion<Type>) {
-    assertions().assert(on: instance, file, line)
+                         @AssertionBuilder<Type> assertions: () -> [Assertion<Type>]) {
+    assertions().forEach { $0.assert(on: instance) }
 }

@@ -9,13 +9,15 @@
 import Foundation
 
 @resultBuilder
-public struct AssertionBuilder<T> {
+public struct AssertionBuilder<Type> {
     
-    public static func buildExpression(_ expression: Assertion<T>) -> Assertion<T> {
-        return expression
+    public static func buildExpression(_ expression: @escaping RawAssertion<Type>,
+                                       _ file: StaticString = #file,
+                                       _ line: UInt = #line) -> Assertion<Type> {
+        return Assertion(assertion: expression, file: file, line: line)
     }
     
-    public static func buildBlock(_ children: Assertion<T>...) -> Assertion<T> {
-        return children.reduce(.empty, { $0.combined(with: $1) })
+    public static func buildBlock(_ children: Assertion<Type>...) -> [Assertion<Type>] {
+        return children
     }
 }

@@ -15,7 +15,7 @@ class OperatorsTests: XCTestCase {
         
         assert(on: myData) {
             \.isEmpty == false
-            \.isEmpty == true
+            \.isEmpty != true
             !\.isEmpty
             \.count > 2
             \.count >= 4

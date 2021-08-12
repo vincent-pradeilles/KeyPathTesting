@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BF46A00222B112F1003F0C2C /* KeyPathTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9FB61822B0CC8E0085E8BE /* KeyPathTesting.framework */; };
-		BF46A00B22B11334003F0C2C /* AssertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46A00A22B11334003F0C2C /* AssertTests.swift */; };
 		BF46A00D22B11503003F0C2C /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF46A00C22B11503003F0C2C /* OperatorsTests.swift */; };
 		BF9FB61D22B0CC8E0085E8BE /* KeyPathTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = BF9FB61B22B0CC8E0085E8BE /* KeyPathTesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF9FB62922B0CCAD0085E8BE /* Assertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9FB62822B0CCAD0085E8BE /* Assertion.swift */; };
@@ -30,7 +29,6 @@
 /* Begin PBXFileReference section */
 		BF469FFD22B112F1003F0C2C /* KeyPathTestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KeyPathTestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF46A00122B112F1003F0C2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF46A00A22B11334003F0C2C /* AssertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssertTests.swift; sourceTree = "<group>"; };
 		BF46A00C22B11503003F0C2C /* OperatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsTests.swift; sourceTree = "<group>"; };
 		BF9FB61822B0CC8E0085E8BE /* KeyPathTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeyPathTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9FB61B22B0CC8E0085E8BE /* KeyPathTesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyPathTesting.h; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				BF46A00122B112F1003F0C2C /* Info.plist */,
-				BF46A00922B11313003F0C2C /* Assert */,
 				BF46A00822B11302003F0C2C /* Operators */,
 			);
 			path = KeyPathTestingTests;
@@ -77,14 +74,6 @@
 				BF46A00C22B11503003F0C2C /* OperatorsTests.swift */,
 			);
 			path = Operators;
-			sourceTree = "<group>";
-		};
-		BF46A00922B11313003F0C2C /* Assert */ = {
-			isa = PBXGroup;
-			children = (
-				BF46A00A22B11334003F0C2C /* AssertTests.swift */,
-			);
-			path = Assert;
 			sourceTree = "<group>";
 		};
 		BF9FB60E22B0CC8E0085E8BE = {
@@ -254,7 +243,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF46A00B22B11334003F0C2C /* AssertTests.swift in Sources */,
 				BF46A00D22B11503003F0C2C /* OperatorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
