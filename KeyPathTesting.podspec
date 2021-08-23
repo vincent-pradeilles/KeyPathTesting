@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name             = 'KeyPathTesting'
   s.version          = '0.1.3'
-  s.summary          = 'KeyPathTesting is a framework that leverages Function Builders to implement a new syntax that allows developers to write KeyPath-based unit tests'
+  s.summary          = 'KeyPathTesting is a framework that leverages Result Builders to implement a new syntax that allows developers to write KeyPath-based unit tests'
 
   s.description      = <<-DESC
-KeyPathTesting is a Swift framework that leverages Function Builders to implement a new syntax that allows developers to write KeyPath-based unit tests.
+KeyPathTesting is a Swift framework that leverages Result Builders to implement a new syntax that allows developers to write KeyPath-based unit tests.
 
 Here's an example of how it can be used:
 
@@ -27,7 +27,7 @@ class MyTests: XCTestCase {
   s.author           = { 'Vincent Pradeilles' => 'vin.pradeilles+keypathtesting@gmail.com' }
   s.source           = { :git => 'https://github.com/vincent-pradeilles/KeyPathTesting.git', :tag => s.version.to_s }
 
-  s.swift_version = '5.1'
+  s.swift_version = '5.4'
 
   s.ios.deployment_target = '9.0'
 

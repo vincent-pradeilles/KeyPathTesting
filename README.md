@@ -6,7 +6,7 @@
 
 ## Context
 
-KeyPathTesting is a Swift framework that leverages Function Builders to implement a new syntax that allows developers to write KeyPath-based unit tests.
+KeyPathTesting is a Swift framework that leverages Result Builders to implement a new syntax that allows developers to write KeyPath-based unit tests.
 
 Here's an example of how it can be used:
 
@@ -25,9 +25,15 @@ class MyTests: XCTestCase {
 }
 ```
 
+## How does it work?
+
+I've made a video to explain in details the internal implementation of `KeyPathTesting` 👇
+
+[![](https://img.youtube.com/vi/58IChtjCPGM/0.jpg)](https://www.youtube.com/watch?v=58IChtjCPGM)
+
 ## Requirements
 
-Xcode 11+ & Swift 5.1
+Xcode 12.5 & Swift 5.4
 
 ## Installation
 
