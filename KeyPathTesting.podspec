@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'KeyPathTesting'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'KeyPathTesting is a framework that leverages Function Builders to implement a new syntax that allows developers to write KeyPath-based unit tests'
 
   s.description      = <<-DESC
