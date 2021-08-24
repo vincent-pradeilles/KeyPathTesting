@@ -37,6 +37,21 @@ Xcode 12.5 & Swift 5.4
 
 ## Installation
 
+### SPM
+
+#### Package.swift
+
+Add a new dependency to your package by adding the following to `Package.swift`:
+
+```
+.package(url: "https://github.com/vincent-pradeilles/KeyPathTesting", from: "0.0.1"),
+```
+
+#### Xcode
+
+Open your project file in the project navigator and select the project instead of one of your targets. Switch to the Swift Packages tab and click the plus.
+When prompted enter the url `https://github.com/vincent-pradeilles/KeyPathTesting`
+
 ### CocoaPods
 
 Add the following to your `Podfile`:

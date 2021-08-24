@@ -35,5 +35,5 @@ Pod::Spec.new do |s|
   s.framework = 'Foundation'
   s.framework = 'XCTest'
 
-  s.source_files = 'KeyPathTesting/KeyPathTesting/**/*.swift'
+  s.source_files = 'Sources/KeyPathTesting/**/*.swift'
 end
