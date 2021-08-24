@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.author           = { 'Vincent Pradeilles' => 'vin.pradeilles+keypathtesting@gmail.com' }
   s.source           = { git: 'https://github.com/vincent-pradeilles/KeyPathTesting.git', tag: s.version.to_s }
 
-  s.swift_version = '5.3'
+  s.swift_version = '5.4'
 
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.10'
