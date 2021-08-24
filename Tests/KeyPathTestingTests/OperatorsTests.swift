@@ -10,21 +10,21 @@ import XCTest
 import KeyPathTesting
 
 class OperatorsTests: XCTestCase {
-
-	func testOperators() {
-		let myData = [1, 2, 3, 4]
-
-		assert(on: myData) {
-			\.isEmpty == false
-			\.isEmpty != true
-			!\.isEmpty
-			\.count > 2
-			\.count >= 4
-			\.count < 7
-			\.count <= 4
-			\.first == 1
-			\.last != 1
-		}
-	}
-
+    
+    func testOperators() {
+        let myData = [1, 2, 3, 4]
+        
+        assert(on: myData) {
+            \.isEmpty == false
+            \.isEmpty != true
+            !\.isEmpty
+            \.count > 2
+            \.count >= 4
+            \.count < 7
+            \.count <= 4
+            \.first == 1
+            \.last != 1
+        }
+    }
+    
 }
