@@ -62,8 +62,11 @@ Add the following to your `Podfile`:
 
 Add the following to your `Cartfile`:
 
-`github "vincent-pradeilles/KeyPathTesting"`
+`github "vincent-pradeilles/KeyPathTesting" == 0.1.4` 
 
-## Author
+Please note that newer versions of this framework do not officially support Carthage anymore
 
-* Twitter: [@v_pradeilles](https://twitter.com/v_pradeilles)
+## Authors
+
+* Vincent Pradeilles: [@v_pradeilles](https://twitter.com/v_pradeilles)
+* Henrik Panhans: [@henrik_dmg](https://twitter.com/henrik_dmg)
