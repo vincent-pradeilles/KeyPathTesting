@@ -10,6 +10,7 @@ import XCTest
 import KeyPathTesting
 
 class OperatorsTests: XCTestCase {
+    
     func testOperators() {
         let myData = [1, 2, 3, 4]
         
@@ -25,4 +26,5 @@ class OperatorsTests: XCTestCase {
             \.last != 1
         }
     }
+    
 }
